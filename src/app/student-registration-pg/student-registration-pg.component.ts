@@ -7,6 +7,7 @@ import { Student } from '../models/student.model';
   styleUrl: './student-registration-pg.component.css',
 })
 export class StudentRegistrationPgComponent {
+  studentsList: Student[] = [];
   tempStudent: Student = new Student();
   onUploadStdImageChange(event: Event) {
     let fileInput = event.target as HTMLInputElement;
@@ -20,6 +21,9 @@ export class StudentRegistrationPgComponent {
     }
   }
   onRegisterStdBtnClick() {
-    console.log(this.tempStudent);
+    this.studentsList.push(this.tempStudent);
+    this.tempStudent = new Student();
+
+    console.log(this.studentsList);
   }
 }
