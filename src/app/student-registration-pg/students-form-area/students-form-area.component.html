@@ -1,0 +1,76 @@
+<article class="user-registration-form">
+  <img
+    class="user-img"
+    *ngIf="tempStudent.imgSrc"
+    [src]="tempStudent.imgSrc"
+    alt="uploaded image"
+  />
+  <div class="mb-3">
+    <label for="">Enter user Image</label>
+    <input
+      (change)="onUploadStdImageChange($event)"
+      type="file"
+      class="form-control"
+    />
+  </div>
+  <div class="d-flex justify-content-between">
+    <div class="mb-3 col-md-5">
+      <label for="">Enter user name</label>
+      <input [(ngModel)]="tempStudent.name" type="text" class="form-control" />
+    </div>
+    <div class="mb-3 col-md-5">
+      <label for="">Enter user surName</label>
+      <input
+        [(ngModel)]="tempStudent.surName"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="">Enter user age</label>
+    <input [(ngModel)]="tempStudent.age" type="text" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label for="">Enter user mail</label>
+    <input [(ngModel)]="tempStudent.mail" type="text" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label for="">Enter user phone</label>
+    <input [(ngModel)]="tempStudent.phone" type="text" class="form-control" />
+  </div>
+  <div class="d-flex justify-content-between">
+    <div class="mb-3 col-md-3">
+      <label for="">Enter user country</label>
+      <input
+        [(ngModel)]="tempStudent.address.country"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <div class="mb-3 col-md-3">
+      <label for="">Enter user street</label>
+      <input
+        [(ngModel)]="tempStudent.address.street"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <div class="mb-3 col-md-3">
+      <label for="">Enter user city</label>
+      <input
+        [(ngModel)]="tempStudent.address.city"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="mb-3">
+    <button
+      (click)="onRegisterStdBtnClick()"
+      class="btn btn-dark col-md-12 d-block"
+    >
+      Register
+    </button>
+  </div>
+</article>

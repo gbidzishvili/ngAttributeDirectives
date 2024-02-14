@@ -1,0 +1,26 @@
+<article class="d-flex flex-wrap">
+    <mat-card
+      class="example-card me-5 mt-5"
+      *ngFor="let student of students"
+    >
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{ student.name }}</mat-card-title>
+          <mat-card-title>{{ student.surName }}</mat-card-title>
+          <mat-card-subtitle>{{ student.age }}</mat-card-subtitle>
+          <mat-card-subtitle>{{ student.mail }}</mat-card-subtitle>
+          <mat-card-subtitle>{{ student.phone }}</mat-card-subtitle>
+          <img mat-card-xl-image [src]="student.imgSrc" />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        {{ student.address.country }}
+      </mat-card-content>
+      <mat-card-content>
+        {{ student.address.street }}
+      </mat-card-content>
+      <mat-card-content>
+        {{ student.address.city }}
+      </mat-card-content>
+    </mat-card>
+  </article>
