@@ -11,4 +11,11 @@ export class Student {
   constructor() {
     this.address = new Address();
   }
+  validateForm() {
+    console.log(this.checkFielld(this.imgSrc) && this.checkFielld(this.name));
+    return this.checkFielld(this.imgSrc) && this.checkFielld(this.name);
+  }
+  checkFielld(field: any) {
+    return field && field.length > 0;
+  }
 }

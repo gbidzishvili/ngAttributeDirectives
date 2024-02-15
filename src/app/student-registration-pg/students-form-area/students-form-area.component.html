@@ -67,6 +67,7 @@
   </div>
   <div class="mb-3">
     <button
+      [disabled]="tempStudent.validateForm() == undefined"
       (click)="onRegisterStdBtnClick()"
       class="btn btn-dark col-md-12 d-block"
     >

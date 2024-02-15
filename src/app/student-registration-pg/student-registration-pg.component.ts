@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Student } from '../models/student.model';
+import { Student } from './models/student.model';
 
 @Component({
   selector: 'app-student-registration-pg',
@@ -8,8 +8,7 @@ import { Student } from '../models/student.model';
 })
 export class StudentRegistrationPgComponent {
   studentsList: Student[] = [];
-  onStdEmitterSubs(student:Student){
-    this.studentsList.push(student)
+  onStdEmitterSubs(student: Student) {
+    this.studentsList.push(student);
   }
-  
 }

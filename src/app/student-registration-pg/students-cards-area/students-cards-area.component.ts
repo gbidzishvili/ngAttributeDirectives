@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Student } from '../../models/student.model';
+import { Student } from './../models/student.model';
 
 @Component({
   selector: 'app-students-cards-area',
